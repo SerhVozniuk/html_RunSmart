@@ -324,7 +324,6 @@
 
 .catalog {
   padding: 0px 0px 80px 0px;
-  min-height: 1100px;
 }
 
 .catalog__tabs {
@@ -388,6 +387,7 @@
 }
 
 .catalog-item {
+  display: none;
   position: relative;
   width: 300px;
   min-height: 440px;
@@ -396,6 +396,10 @@
   padding: 20px;
   border: 2px solid #E8E8E8;
   overflow: hidden;
+}
+
+.catalog-item--active {
+  display: block;
 }
 
 .catalog-item__img {

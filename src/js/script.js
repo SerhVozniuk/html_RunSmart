@@ -1,8 +1,8 @@
-
 import slider from './modules/slider.js'
 import togleCataloContent from './modules/togleCataloContent.js'
 import forms from "./modules/forms.js"
 import {closeModal, openModal} from './modules/modal.js'
+import {activeTabs, showCatalog} from './modules/tabs.js'
 
 window.addEventListener('DOMContentLoaded', () =>{
     slider('.slider__prev', '.slider__next', '.slider__block__item');
@@ -19,7 +19,7 @@ window.addEventListener('DOMContentLoaded', () =>{
     openModal();
 });
 
-
-
-
-
+document.querySelector('.catalog__tabs').addEventListener('click', function(event){
+    activeTabs(event.target);
+    showCatalog(event.target);
+});
